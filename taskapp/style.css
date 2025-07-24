@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    background: #000;
+    color: #33ff33;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+
+  .page {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #33ff33;
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+  }
+  
+
+  .page h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1.5rem;
+    animation: glitch 1s infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      text-shadow:
+        2px 0 #f0f,
+        -2px 0 #0ff;
+    }
+    10%, 50%, 90% {
+      text-shadow:
+        -2px 0 #f0f,
+        2px 0 #0ff;
+    }
+  }
+  
+
+  .input-group {
+    display: flex;
+  }
+  
+  #myinput {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #33ff33;
+    background: transparent;
+    color: #33ff33;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  #myinput::placeholder {
+    color: rgba(51, 255, 51, 0.6);
+  }
+  
+  #mybutton {
+    padding: 0.6rem 1rem;
+    border: none;
+    background: #33ff33;
+    color: #000;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition
+}
