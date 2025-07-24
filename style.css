@@ -1,61 +1,81 @@
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f0f6; /* Fondo suave */
-    color: #333; /* Color de texto */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    background: #000;
+    color: #33ff33;
+    font-family: 'Fira Code', 'Courier New', monospace;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-}
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
 
-/* Estilo de la página */
-.page {
-    background-color: #fff; /* Fondo blanco para el contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px;
+  .page {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #33ff33;
+    backdrop-filter: blur(4px);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 380px;
     text-align: center;
-}
+  }
+  
 
-/* Estilo del título */
-h1 {
-    color: #0400d5; /* Color rosado */
-    margin-bottom: 20px;
-}
+  .page h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1.5rem;
+    animation: glitch 1s infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      text-shadow:
+        2px 0 #f0f,
+        -2px 0 #0ff;
+    }
+    10%, 50%, 90% {
+      text-shadow:
+        -2px 0 #f0f,
+        2px 0 #0ff;
+    }
+  }
+  
 
-/* Estilo del input */
-input[type="text"] {
-    width: 80%; /* Ancho del input */
-    padding: 10px; /* Espaciado interno */
-    border: 2px solid #1900d5; /* Borde rosado */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 20px; /* Espacio inferior */
-    font-size: 16px; /* Tamaño de fuente */
-}
-
-/* Estilo del botón */
-button {
-    background-color: #0000d5; /* Fondo rosado */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s; /* Transición suave */
-}
-
-/* Efecto al pasar el mouse sobre el botón */
-button:hover {
-    background-color: #0006b0; /* Color más oscuro al pasar el mouse */
-}
-
-/* Estilo del pie de página */
-p {
-    color: slategray; /* Color del texto */
-    text-align: center; /* Centrar texto */
-    margin-top: 20px; /* Espacio superior */
+  .input-group {
+    display: flex;
+  }
+  
+  #myinput {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #33ff33;
+    background: transparent;
+    color: #33ff33;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+  }
+  
+  #myinput::placeholder {
+    color: rgba(51, 255, 51, 0.6);
+  }
+  
+  #mybutton {
+    padding: 0.6rem 1rem;
+    border: none;
+    background: #33ff33;
+    color: #000;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition
 }
